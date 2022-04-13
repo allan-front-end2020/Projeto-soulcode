@@ -7,11 +7,28 @@
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .noscript {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
 </head>
 
 <body>
-    <noscript>
-    <h1>JavaScript desativado</h1>
+    <noscript class="noscript">
+    <h1>JavaScript Desativado</h1>
+    <p>Habilite o Java Script do seu navegador</p>
   </noscript>
     <app-root></app-root>
 </body>
