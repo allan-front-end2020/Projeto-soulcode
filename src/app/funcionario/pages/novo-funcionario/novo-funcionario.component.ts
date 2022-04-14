@@ -9,6 +9,7 @@ export class NovoFuncionarioComponent implements OnInit {
 
   @ViewChild('fileInput')
   fileInput!: ElementRef
+  
 
   constructor() { }
 
