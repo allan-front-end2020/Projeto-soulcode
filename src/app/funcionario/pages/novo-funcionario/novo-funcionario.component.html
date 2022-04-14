@@ -1,0 +1,19 @@
+<div class="flex-container">
+    <mat-card>
+        <form action="" id="main-form">
+            <mat-form-field appearence="outline">
+                <mat-label>Nome do funcionario</mat-label>
+                <input type="text" matInput>
+            </mat-form-field>
+            <mat-form-field appearence="outline">
+                <mat-label>Email do funcionario</mat-label>
+                <input type="email" matInput>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" type="button" class="btn" (click)="selectImage()">Adicinar foto</button>
+            <input type="file" id="file-input" #fileInput>
+            <button mat-raised-button color="accent" type="submit" style="margin-top: 10px;">Enviar Foto</button>
+
+        </form>
+    </mat-card>
+</div>
