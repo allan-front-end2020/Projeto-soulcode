@@ -1,17 +1,29 @@
 <div class="flex-container">
     <mat-card>
-        <form action="" id="main-form">
+        <form action="" id="main-form" [formGroup]="funcionario">
             <mat-form-field appearence="outline">
                 <mat-label>Nome do funcionario</mat-label>
-                <input type="text" matInput>
+                <input type="text" matInput formControlName='nome'>
+                <mat-error>
+                    Campo Obrigatório
+                </mat-error>
+
             </mat-form-field>
             <mat-form-field appearence="outline">
                 <mat-label>Email do funcionario</mat-label>
-                <input type="email" matInput>
+                <input type="email" matInput formControlName='email'>
+                <mat-error>
+                    <span *ngIf="funcionario.get('email')?.getError('required')">
+                        Esse campo e obrigatório
+                    </span>
+                    <span *ngIf="funcionario.get('email')?.getError('email')">
+                      Digite um e-mail valido
+                    </span>
+                </mat-error>
             </mat-form-field>
 
-            <button mat-raised-button color="primary" type="button" class="btn" (click)="selectImage()">Adicinar foto</button>
-            <input type="file" id="file-input" #fileInput>
+            <button mat-raised-button type="button" [color]="funcionario.get('foto')?.invalid ? 'warn' : 'primary'" class="btn" (click)="selectImage()">Adicinar foto</button>
+            <input type="file" id="file-input" #fileInput formControlName='foto'>
             <button mat-raised-button color="accent" type="submit" style="margin-top: 10px;">Cadastrar</button>
         </form>
     </mat-card>

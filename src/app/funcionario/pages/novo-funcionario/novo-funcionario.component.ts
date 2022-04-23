@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-novo-funcionario',
@@ -10,8 +11,16 @@ export class NovoFuncionarioComponent implements OnInit {
   @ViewChild('fileInput')
   fileInput!: ElementRef
   
+  funcionario:FormGroup =this.fb.group({
+    nome:['',[Validators.required]],
+    email:['',[Validators.required, Validators.email ]],
+    foto:['', [Validators.required]],
 
-  constructor() { }
+  })
+
+  constructor(
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit(): void {
   }
