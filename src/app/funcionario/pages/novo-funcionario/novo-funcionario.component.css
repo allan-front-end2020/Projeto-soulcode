@@ -1,20 +1,13 @@
-    .flex-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    
-    #main-form {
-        display: flex;
-        flex-direction: column;
-        width: 400px;
-    }
-    
-    #file-input {
-        display: none;
-    }
-    
-    btn {
-        width: 150px;
-    }
+  #main-form {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+  }
+  
+  #file-input {
+      display: none;
+  }
+  
+  btn {
+      width: 150px;
+  }

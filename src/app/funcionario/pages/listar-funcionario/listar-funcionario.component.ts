@@ -11,17 +11,20 @@ export class ListarFuncionarioComponent implements OnInit {
    {
    id: 1,
    nome:'allan',
-   email:'allan@allan'
+   email:'allan@allan',
+  
  },
  {
   id: 2,
-  nome:'allan',
-  email:'allan@allan'
+  nome:'tavares',
+  email:'tavares@allan',
+ 
 },
 {
   id: 3,
-  nome:'allan',
-  email:'allan@allan'
+  nome:'Jose',
+  email:'Tavares@allan',
+
 }
 ]
   
