@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { Funcionario} from "../models/funcionario";
 
 @Injectable()
-
 export class FuncionarioHttpService {
 
    private readonly baseURL = 'http://localhost:8080/servicos/funcionario'
@@ -15,5 +14,10 @@ export class FuncionarioHttpService {
 
 public getFuncionario(): Observable<Funcionario[]>{
   return this.http.get<Funcionario[]>(this.baseURL)
+  }
+
+  getFuncionarioById(id:number):Observable<Funcionario>{
+    return this.http.get<Funcionario>(`${this.baseURL}/${id}`)
+
   }
 }
